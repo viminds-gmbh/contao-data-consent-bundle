@@ -1,0 +1,3 @@
+dataconsent:
+    resource: "@QbusDataConsentBundle/Controller"
+    type: annotation

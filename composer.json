@@ -1,0 +1,29 @@
+{
+    "name": "qbus/contao-data-consent-bundle",
+    "type": "contao-bundle",
+    "description": "Contao Data Consent",
+    "homepage": "https://www.qbus.de",
+    "support": {
+        "issues": "https://github.com/qbus-agentur/contao-data-consent-bundle/issues"
+    },
+    "authors": [
+        {
+            "name": "Alex Wuttke",
+            "email": "alw@qbus.de",
+            "role": "Developer",
+            "homepage": "https://www.qbus.de"
+        }
+    ],
+    "license": "LGPL-3.0+",
+    "require": {
+        "contao/core-bundle": "^4.4"
+    },
+    "extra": {
+        "contao-manager-plugin": "Qbus\\DataConsentBundle\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Qbus\\DataConsentBundle\\": "src/"
+        }
+    }
+}

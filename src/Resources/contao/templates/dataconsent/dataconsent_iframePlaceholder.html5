@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0;}
+html,body{min-height:100vh}
+body{display:flex;justify-content:center;align-items:center;padding:2em;flex-direction:column;
+font: 1.4em/1.4 Verdana,Arial,Helvetica,sans-serif;
+background: #494949;
+color:rgba(255,255,255,.5);
+}
+p{text-align: center}
+a{color: inherit; text-decoration: underline}
+.buttons{display:flex;margin-top:2em;}
+.button {
+font-size:.95em;
+border:1px solid currentColor;
+padding:.5em .75em;
+text-decoration:none;
+margin-right:1em;
+}
+.button:hover,.button:focus{color:white}
+@media (max-width: 45em) {
+body{font-size: 1.2em;}
+}
+@media (max-width: 30em) {
+body{font-size: .9em;}
+.buttons {flex-wrap:wrap;}
+.buttons > * {margin: 0 0 .3em; flex: 1 0 100%; text-align: center}
+}
+@media (max-width: 15em) {
+body{font-size: .75em;}
+}
+</style>
+
+<?php if ($this->lang === 'de'): ?>
+
+<p>Inhalte des externen Servers <strong><?= $this->host ?></strong> wurden nicht geladen, da <strong><?= $this->type ?></strong> cookies nicht aktiviert sind.</p>
+<div class="buttons">
+  <a class="button" href="javascript:parent.openConsent()">DSGVO Einstellungen</a>
+  <a class="button" href="<?= $this->url ?>"><?= $this->title ?> jetzt laden</a>
+</div>
+
+<?php else: ?>
+
+<p>Content from Host <strong><?= $this->host ?></strong> has not been loaded as <strong><?= $this->type ?></strong> cookies have not been enabled.
+</p>
+<div class="buttons">
+  <a class="button" href="javascript:parent.openConsent()">Privacy Settings</a>
+  <a class="button" href="<?= $this->url ?>">Load <?= $this->title ?> Now</a>
+</div>
+
+<?php endif; ?>
