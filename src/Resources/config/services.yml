@@ -1,3 +1,4 @@
 services:
     dataconsent.listener.output_frontend_template:
         class: Qbus\DataConsentBundle\EventListener\OutputFrontendTemplateListener
+        public: true
