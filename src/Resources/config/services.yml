@@ -2,3 +2,8 @@ services:
     dataconsent.listener.output_frontend_template:
         class: Qbus\DataConsentBundle\EventListener\OutputFrontendTemplateListener
         public: true
+
+    Qbus\DataConsentBundle\Controller\IframePlaceholderController:
+        calls:
+            - [setContainer, ['@service_container']]
+        public: true

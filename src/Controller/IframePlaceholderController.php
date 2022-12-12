@@ -10,7 +10,7 @@
 namespace Qbus\DataConsentBundle\Controller;
 
 use Contao\FrontendTemplate;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -18,7 +18,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/iframe-placeholder")
  */
-class IframePlaceholderController extends Controller
+class IframePlaceholderController extends AbstractController
 {
     /**
      * @Route("/lang/{lang}", name="index")
