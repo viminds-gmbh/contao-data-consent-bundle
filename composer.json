@@ -1,5 +1,5 @@
 {
-    "name": "qbus/contao-data-consent-bundle",
+    "name": "viminds-gmbh/contao-data-consent-bundle",
     "type": "contao-bundle",
     "description": "Contao Data Consent",
     "homepage": "https://www.qbus.de",
@@ -16,7 +16,7 @@
     ],
     "license": "LGPL-3.0+",
     "require": {
-        "contao/core-bundle": "^4.4 || ^5.3"
+        "contao/core-bundle": "^5.3"
     },
     "extra": {
         "contao-manager-plugin": "Qbus\\DataConsentBundle\\ContaoManager\\Plugin"
